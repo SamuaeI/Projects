@@ -1,6 +1,6 @@
 import random
 
-ChosenMultiple = input("Chose a multiple: ")
+ChosenMultiple = input("Choose a multiple: ")
 
 while True:
     if not ChosenMultiple.isnumeric():
