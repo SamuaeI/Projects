@@ -22,6 +22,7 @@ while True:
         print(strCorrect + "\n" + strIncorrect + "\n" + strScore)
         print("-"*maxStrLen)
         break
+        
     if Answer.isnumeric() and int(Answer) == QuestionSolution:
         print("Correct")
         Correct += 1
