@@ -1,6 +1,6 @@
 local ChosenMultiple
 
-io.write("Chose a multiple (random if not a number): ")
+io.write("Choose a multiple: ")
 ChosenMultiple = io.read()
 
 while true do
