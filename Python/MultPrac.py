@@ -30,7 +30,7 @@ while True:
 
     if Answer.isnumeric() and int(Answer) == QuestionSolution:
         stopTime = time.time()
-        print("Correct, it took you, " + str(round((stopTime - QuestionStartTime), 1)) + " seconds")
+        print("Correct. time: " + str(round((stopTime - QuestionStartTime), 1)) + " seconds")
         Correct += 1
     else:
         print("Incorrect")
