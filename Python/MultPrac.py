@@ -4,7 +4,7 @@ import math
 
 ChosenMultiple = input("Chose a multiple: ")
 VeryStartTime = time.time()
-Correct, Incorrect, LastMultiple = 0, 0, 0
+Correct, Incorrect, LastMultiple, QuestionNum = 0, 0, 0, 0
 
 while True:
     if not ChosenMultiple.isnumeric():
@@ -17,7 +17,8 @@ while True:
         
     LastMultiple = SecondMultiple
     QuestionSolution = int(ChosenMultiple) * SecondMultiple
-    Answer = input(str(ChosenMultiple) + " x " + str(SecondMultiple) + " = ")
+    QuestionNum += 1
+    Answer = input("Q"+str(QuestionNum) +". " + str(ChosenMultiple) + " x " + str(SecondMultiple) + " = ")
 
     if Answer.lower() == "done":
         endTime = time.time()
@@ -38,7 +39,7 @@ while True:
 
         ChosenMultiple = input("Chose a multiple: ")
         VeryStartTime = time.time()
-        Correct, Incorrect, LastMultiple = 0, 0, 0
+        Correct, Incorrect, LastMultiple, QuestionNum = 0, 0, 0, 0
         continue
     elif Answer.lower() == "stop":
         break
