@@ -4,7 +4,7 @@ import math
 
 ChosenMultiple = input("Chose a multiple: ")
 VeryStartTime = time.time()
-Correct, Incorrect = 0, 0
+Correct, Incorrect, LastMultiple = 0, 0, 0
 
 while True:
     if not ChosenMultiple.isnumeric():
@@ -12,6 +12,10 @@ while True:
     QuestionStartTime = time.time()
     
     SecondMultiple = random.randrange(1, 12)
+    if SecondMultiple != 0 and LastMultiple == SecondMultiple:
+        SecondMultiple = random.randrange(1, 12)
+        
+    LastMultiple = SecondMultiple
     QuestionSolution = int(ChosenMultiple) * SecondMultiple
     Answer = input(str(ChosenMultiple) + " x " + str(SecondMultiple) + " = ")
 
