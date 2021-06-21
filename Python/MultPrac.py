@@ -6,14 +6,16 @@ ChosenMultiple = input("Chose a multiple: ")
 VeryStartTime = time.time()
 Correct, Incorrect, LastMultiple, QuestionNum = 0, 0, 0, 0
 
+nMin, nMax = 0, 12
+
 while True:
     if not ChosenMultiple.isnumeric():
-        ChosenMultiple = str(random.randrange(1, 12))
+        ChosenMultiple = str(random.randrange(nMin, nMax))
     QuestionStartTime = time.time()
     
-    SecondMultiple = random.randrange(1, 12)
+    SecondMultiple = random.randrange(nMin, nMax)
     if SecondMultiple != 0 and LastMultiple == SecondMultiple:
-        SecondMultiple = random.randrange(1, 12)
+        SecondMultiple = random.randrange(nMin, nMax)
         
     LastMultiple = SecondMultiple
     QuestionSolution = int(ChosenMultiple) * SecondMultiple
